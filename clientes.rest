@@ -1,0 +1,42 @@
+### Mostrar todo los clientes
+GET http://127.0.0.1:5000/clientes
+
+###BUSCAR
+GET http://127.0.0.1:5000/clientes/:1010
+
+### REGISTRAR
+POST http://127.0.0.1:5000/clientes
+Accept: application/json
+Content-Type: application/json
+
+{
+    "ci_e": 9090,
+    "nombre_e": "oscar",
+    "apellido_e": "barrios",
+    "correo_e": "xoscarb@gmail.com",
+    "fecha_nac_e": "1980-10-01",
+    "genero_e": "m",
+    "direccion_e": "tumusla 201",
+    "pais_e": "francia",
+    "telefono_e": 77772323
+  }
+
+
+### MODIFICAR
+PUT http://127.0.0.1:5000/clientes/:9090
+Accept: application/json
+Content-Type: application/json
+
+{
+    "nombre_e": "carla",
+    "apellido_e": "arenas",
+    "correo_e": "carenas@gmail.com",
+    "fecha_nac_e": "1980-12-03",
+    "genero_e": "f",
+    "direccion_e": "calle pando",
+    "pais_e": "francia",
+    "telefono_e": 65987410
+  }
+
+### ELIMINAR
+DELETE  http://127.0.0.1:5000/clientes/:9090
